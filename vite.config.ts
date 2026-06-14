@@ -5,8 +5,8 @@ import { traeBadgePlugin } from 'vite-plugin-trae-solo-badge';
 
 // https://vite.dev/config/
 export default defineConfig({
-  // Gitee Pages 部署配置
-  base: '/interview/',
+  // GitHub Pages 部署配置
+  base: '/portfolio/',
   build: {
     outDir: 'dist',
     sourcemap: 'hidden',
