@@ -1,0 +1,4 @@
+static_dir: dist
+package_manager: npm
+framework: vite
+build_command: WASMER=true npm run build
