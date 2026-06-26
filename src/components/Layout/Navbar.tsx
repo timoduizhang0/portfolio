@@ -37,9 +37,9 @@ export function Navbar() {
         {/* Logo */}
         <a
           href="#home"
-          className="font-mono font-bold text-xl text-white hover:text-primary transition-colors"
+          className="font-bold text-xl text-white hover:text-primary transition-colors"
         >
-          {'<XW />'}
+          徐武
         </a>
 
         {/* Desktop Nav */}
