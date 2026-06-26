@@ -5,8 +5,8 @@ import { traeBadgePlugin } from 'vite-plugin-trae-solo-badge';
 
 // https://vite.dev/config/
 export default defineConfig({
-  // GitHub Pages → /portfolio/ , Wasmer → /
-  base: process.env.WASMER ? '/' : '/portfolio/',
+  // Wasmer / Vercel / Netlify 部署：使用根路径
+  base: '/',
   build: {
     outDir: 'dist',
     sourcemap: 'hidden',
