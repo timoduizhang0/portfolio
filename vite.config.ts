@@ -4,8 +4,9 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 // https://vite.dev/config/
 export default defineConfig({
-  // Wasmer / Vercel / Netlify 部署：使用根路径
-  base: '/',
+  // GitHub Pages: /portfolio/
+  // Wasmer: /
+  base: process.env.GITHUB_PAGES ? '/portfolio/' : '/',
   build: {
     outDir: 'dist',
     sourcemap: 'hidden',
