@@ -4,8 +4,8 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 // https://vite.dev/config/
 export default defineConfig({
-  // GitHub Pages 部署配置
-  base: '/portfolio/',
+  // EdgeOne Pages 部署：根路径
+  base: '/',
   build: {
     outDir: 'dist',
     sourcemap: 'hidden',
