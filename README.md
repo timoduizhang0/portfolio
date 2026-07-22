@@ -1,57 +1,78 @@
-# React + TypeScript + Vite
+# 个人作品集网站
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+基于 Vite + React + TypeScript + Tailwind CSS 构建的个人作品集与博客站点。
 
-Currently, two official plugins are available:
+## 技术栈
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **框架**: React 18 + TypeScript 5.8
+- **构建工具**: Vite 6
+- **样式**: Tailwind CSS 3 + PostCSS
+- **状态管理**: Zustand 5
+- **动画**: Framer Motion 12
+- **路由**: React Router 7
+- **工具库**: clsx, tailwind-merge, lucide-react
 
-## Expanding the ESLint configuration
+## 功能特性
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 响应式个人主页与作品展示
+- 技能标签与项目卡片
+- 暗色/亮色主题切换
+- 平滑滚动与入场动画
+- 联系表单与页脚导航
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 快速开始
+
+### 环境要求
+
+- Node.js >= 18
+- npm >= 9
+
+### 安装与运行
+
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 构建
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  extends: [
-    // other configs...
-    // Enable lint rules for React
-    reactX.configs['recommended-typescript'],
-    // Enable lint rules for React DOM
-    reactDom.configs.recommended,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+npm run build
 ```
+
+构建产物输出到 `dist` 目录。
+
+### 代码检查
+
+```bash
+npm run check
+npm run lint
+```
+
+## 项目结构
+
+```
+src/
+├── components/       # 通用组件
+│   ├── Layout/       # 布局组件（导航栏、页脚）
+│   ├── sections/     # 页面区块
+│   └── ui/           # 基础 UI 组件
+├── data/             # 静态数据（个人信息、项目、技能）
+├── hooks/            # 自定义 Hooks
+├── lib/              # 工具函数
+├── pages/            # 页面组件
+├── App.tsx           # 根组件
+├── main.tsx          # 入口文件
+└── index.css         # 全局样式
+```
+
+## 配置说明
+
+- **`vite.config.ts`**: 构建输出目录 `dist`，启用 `vite-tsconfig-paths` 路径别名
+- **`tailwind.config.js`**: 主题色与暗色模式配置
+- **`tsconfig.json`**: 路径别名 `@/*` 映射到 `src/*`
+- **`.gitignore`**: 忽略 `dist/`、`node_modules/`、构建缓存等
+
+## 部署
+
+项目已适配 [IGA Pages](https://docs.volcengine.com/docs/6559/2188992?lang=zh) 静态站点托管平台，可直接上传 ZIP 包或关联 Git 仓库进行自动构建部署。
