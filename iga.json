@@ -1,0 +1,4 @@
+{
+  "buildCommand": "rm -rf dist && vite build",
+  "outputDirectory": "dist"
+}
