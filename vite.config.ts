@@ -4,8 +4,8 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 // https://vite.dev/config/
 export default defineConfig({
-  // IGA Pages 部署：子路径使用相对路径
-  base: './',
+  // IGA Pages 部署：根路径
+  base: '/',
   build: {
     outDir: 'dist',
     sourcemap: 'hidden',

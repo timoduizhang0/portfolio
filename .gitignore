@@ -33,3 +33,5 @@ pnpm-debug.log*
 
 # TypeScript cache
 *.tsbuildinfo
+
+portfolio-deploy.zip
